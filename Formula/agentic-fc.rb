@@ -15,7 +15,8 @@ class AgenticFc < Formula
       -X github.com/gaemi/agentic-fc/internal/buildinfo.Commit=1b72b6d30a4527e50016079b7bc1d2d507f1e016
     ].join(" ")
     system "go", "build", *std_go_args(ldflags: ldflags, output: bin/"agenticfc"), "./cmd/agenticfc"
-    system "go", "build", *std_go_args(ldflags: ldflags, output: bin/"agenticfc-console"), "./cmd/agenticfc-console"
+    system "go", "build", *std_go_args(ldflags: ldflags, output: bin/"agenticfc-console"),
+           "./cmd/agenticfc-console"
     system "go", "build", *std_go_args(ldflags: ldflags, output: bin/"agenticfc-calibrate"), "./cmd/agenticfc-calibrate"
   end
 

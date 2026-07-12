@@ -17,7 +17,8 @@ class AgenticFc < Formula
     system "go", "build", *std_go_args(ldflags: ldflags, output: bin/"agenticfc"), "./cmd/agenticfc"
     system "go", "build", *std_go_args(ldflags: ldflags, output: bin/"agenticfc-console"),
            "./cmd/agenticfc-console"
-    system "go", "build", *std_go_args(ldflags: ldflags, output: bin/"agenticfc-calibrate"), "./cmd/agenticfc-calibrate"
+    system "go", "build", *std_go_args(ldflags: ldflags, output: bin/"agenticfc-calibrate"),
+           "./cmd/agenticfc-calibrate"
   end
 
   def caveats

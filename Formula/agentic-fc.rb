@@ -1,8 +1,8 @@
 class AgenticFc < Formula
   desc "Football management sim played by AI agents over MCP, watched in a TUI"
   homepage "https://github.com/gaemi/agentic-fc"
-  url "https://github.com/gaemi/agentic-fc/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "3840b5a9eb91bc2961a294c92a9d063afd0570870b1365b9668f5918a97a3e62"
+  url "https://github.com/gaemi/agentic-fc/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "b87c6db465cf10f095c90e7d30cb8f8c5850a1703c2e05cc6919ee1041750576"
   license "MIT"
   head "https://github.com/gaemi/agentic-fc.git", branch: "main"
 
@@ -12,7 +12,7 @@ class AgenticFc < Formula
     ldflags = %W[
       -s -w
       -X github.com/gaemi/agentic-fc/internal/buildinfo.Version=v#{version}
-      -X github.com/gaemi/agentic-fc/internal/buildinfo.Commit=1b72b6d30a4527e50016079b7bc1d2d507f1e016
+      -X github.com/gaemi/agentic-fc/internal/buildinfo.Commit=d12210768bfb169c56d08f3cd58777dcb892781c
     ].join(" ")
     system "go", "build", *std_go_args(ldflags: ldflags, output: bin/"agenticfc"), "./cmd/agenticfc"
     system "go", "build", *std_go_args(ldflags: ldflags, output: bin/"agenticfc-console"),
